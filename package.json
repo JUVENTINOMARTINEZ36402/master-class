@@ -1,5 +1,5 @@
 {
-  "name": "docker-node-app",
+  "name": "master-class",
   "version": "1.0.0",
   "description": "App simple para probar Docker en una masterclass",
   "main": "app.js",
