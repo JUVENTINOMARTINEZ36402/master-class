@@ -1,7 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+
+// Servir archivos estáticos (como imágenes)
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.send(`
@@ -32,28 +36,16 @@ app.get('/', (req, res) => {
         p {
           font-size: 1.2rem;
         }
-        .btn {
-          margin-top: 2rem;
-          padding: 0.8rem 1.5rem;
-          background-color: #e63946;
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-size: 1rem;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-          background-color: #d62839;
+        img {
+          max-width: 200px;
+          margin-top: 1.5rem;
         }
       </style>
     </head>
     <body>
       <h1>🐳 ¡Hola desde Docker!</h1>
       <p>Estás ejecutando esta app dentro de un contenedor Docker.</p>
-      <button class="btn" onclick="alert('¡Estás listo para usar Docker como un pro!')">
-        ¡Haz clic si estás aprendiendo!
-      </button>
+      <img src="/docker_whale.png" alt="Docker logo" />
     </body>
     </html>
   `);
