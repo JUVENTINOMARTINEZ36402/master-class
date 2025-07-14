@@ -1,4 +1,3 @@
-version: '3'
 services:
   master-class:
     container_name: master-class
@@ -6,6 +5,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
     command: npm run dev
+
+volumes:
+  node_modules:
