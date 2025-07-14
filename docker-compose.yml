@@ -7,4 +7,5 @@ services:
       - "3000:3000"
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules  # evita sobrescribir node_modules del contenedor
     command: npm start
