@@ -46,6 +46,8 @@ app.get('/', (req, res) => {
       <h1>🐳 ¡Hola desde Docker!</h1>
       <p>Estás ejecutando esta app dentro de un contenedor Docker.</p>
       <img src="/docker_whale.png" alt="Docker logo" />
+      <h1>🫡💻 ¡Soy ______ y estoy corriendo exitosamente la app desde Docker!</h1>
+
     </body>
     </html>
   `);
